@@ -8,9 +8,10 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:samiksha/colors.dart' as colors;
 import 'package:samiksha/components/dashboard_tab.dart';
 import 'package:samiksha/components/recent_release.dart';
+import 'package:samiksha/pages/error.dart';
 
 //pages
-import 'components/features_products.dart';
+
 import 'components/slideTransition.dart';
 import 'pages/about.dart';
 import 'pages/cart.dart';
@@ -385,6 +386,35 @@ class MyDrawer extends StatelessWidget {
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold)),
               leading: Icon(Icons.fast_rewind),
+              trailing: Container(
+                width:30,height: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    color:Colors.green,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top:5),
+                    child: Text('5',textAlign: TextAlign.center,style: TextStyle(color: Colors.white),),
+                  )),
+            )),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Container(
+            width: double.infinity,
+            height: 1,
+            color: Colors.grey.withOpacity(.4),
+          ),
+        ), InkWell(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>errorPage()));
+            },
+            child: ListTile(
+              title: Text('Error Page',
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold)),
+              leading: Icon(FontAwesomeIcons.question),
             )),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),

@@ -60,6 +60,7 @@ flutter:
     - images/product/3.jpg
     - images/product/4.jpg
     - images/agent-2.jpg
+    - images/404.gif
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
